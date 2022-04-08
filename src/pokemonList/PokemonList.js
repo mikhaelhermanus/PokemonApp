@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, TouchableOpacity, ActivityIndicator } from 'react-native';
 import Header from '../component/Header'
 import colors from '../styles/colors'
 import PokemonCard from '../component/PokemonCard'
 import { useQuery } from 'react-query'
 import { useNavigation } from '@react-navigation/native'
+import TrackButton from '../analytics';
+import analytics from '@react-native-firebase/analytics';
 
 
 const PokemonList = props => {
@@ -28,6 +30,31 @@ const PokemonList = props => {
         setNextpage(nextPage - 10),
             setCurrentPage(currentPage - 1)
     }
+
+    const onLogScreenView = async () =>{
+        try {
+            await  analytics().logScreenView({
+                screen_name: 'Home',
+                screen_class: 'Home',
+            })
+        } catch (error) {
+            console.log(error)
+        }
+      
+    }
+
+    const onLogUserProperties = async () =>{
+        try {
+            await  analytics().setUserProperties
+        } catch (error) {
+            console.log(error)
+        }
+      
+    }
+
+    useEffect(()=>{
+        onLogScreenView()
+    })
 
     const Footer = () => {
         return (
@@ -70,9 +97,10 @@ const PokemonList = props => {
     return (
         <View style={{ flex: 1, backgroundColor: colors.grayMedium }}>
             <Header home pageName={'PokeDex'} pokeBag rightAction={()=>navigation.navigate('PokeBag')} />
-            <View style={{ margin: 10 }}>
+            <TouchableOpacity onPress={()=>navigation.navigate('Map')} style={{ margin: 10 }}>
                 <Text style={{ fontSize: 24, color: 'black' }}>Pokedex</Text>
-            </View>
+            </TouchableOpacity>
+            <TrackButton/>
             {
                 isError ? <Text>{error}</Text>
                     :
