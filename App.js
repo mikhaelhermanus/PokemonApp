@@ -11,6 +11,7 @@ import PokeBag from './src/pokeBag/pokeBag'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import messaging from '@react-native-firebase/messaging';
 import Map  from './src/component/Map';
+import CameraScan from './src/component/CameraScan'
 
 const Stack = createNativeStackNavigator();
 const queryClient = new QueryClient()
@@ -81,7 +82,7 @@ const App = () => {
           <Stack.Screen name="PokemonDetail" component={PokemonDetail} />
           <Stack.Screen name="PokeBag" component={PokeBag} />
           <Stack.Screen name="Map" component={Map} />
-          
+          <Stack.Screen name='CameraScan' component={CameraScan}/>
         </Stack.Navigator>
       </QueryClientProvider>
     </NavigationContainer>
