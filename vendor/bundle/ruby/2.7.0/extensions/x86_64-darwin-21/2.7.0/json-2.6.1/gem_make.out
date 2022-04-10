@@ -1,0 +1,13 @@
+current directory: /Users/161552.mikhael/Documents/AlatTempur/pokemonApp/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+/Users/161552.mikhael/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/161552.mikhael/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220409-3067-q6i769.rb extconf.rb
+creating Makefile
+
+current directory: /Users/161552.mikhael/Documents/AlatTempur/pokemonApp/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/161552.mikhael/Documents/AlatTempur/pokemonApp/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/161552.mikhael/Documents/AlatTempur/pokemonApp/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+make "DESTDIR=" install

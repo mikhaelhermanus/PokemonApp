@@ -12,6 +12,8 @@ target 'pokemonApp' do
     :hermes_enabled => false
   )
 
+  pod 'TouchID', :path => '../node_modules/react-native-touch-id'
+
   target 'pokemonAppTests' do
     inherit! :complete
     # Pods for testing

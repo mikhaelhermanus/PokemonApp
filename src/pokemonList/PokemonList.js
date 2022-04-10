@@ -100,8 +100,11 @@ const PokemonList = props => {
             <TouchableOpacity onPress={()=>navigation.navigate('Map')} style={{ margin: 10 }}>
                 <Text style={{ fontSize: 24, color: 'black' }}>Pokedex</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>navigation.navigate('CameraScan', {navigation})} style={{ margin: 10 }}>
+            <TouchableOpacity onPress={()=>navigation.navigate('CameraScan')} style={{ margin: 10 }}>
                 <Text style={{ fontSize: 24, color: 'black' }}>Goto Camera Screen</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate('FingerPrint')} style={{ margin: 10 }}>
+                <Text style={{ fontSize: 24, color: 'black' }}>Goto FingerPrint Screen</Text>
             </TouchableOpacity>
             <TrackButton/>
             {

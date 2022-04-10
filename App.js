@@ -12,6 +12,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import messaging from '@react-native-firebase/messaging';
 import Map  from './src/component/Map';
 import CameraScan from './src/component/CameraScan'
+import FingerPrint from './src/component/FingerPrint';
 
 const Stack = createNativeStackNavigator();
 const queryClient = new QueryClient()
@@ -83,6 +84,7 @@ const App = () => {
           <Stack.Screen name="PokeBag" component={PokeBag} />
           <Stack.Screen name="Map" component={Map} />
           <Stack.Screen name='CameraScan' component={CameraScan}/>
+          <Stack.Screen name='FingerPrint' component={FingerPrint}/>
         </Stack.Navigator>
       </QueryClientProvider>
     </NavigationContainer>
