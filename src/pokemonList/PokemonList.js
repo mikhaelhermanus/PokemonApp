@@ -106,6 +106,9 @@ const PokemonList = props => {
             <TouchableOpacity onPress={()=>navigation.navigate('FingerPrint')} style={{ margin: 10 }}>
                 <Text style={{ fontSize: 24, color: 'black' }}>Goto FingerPrint Screen</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate('Login')} style={{ margin: 10 }}>
+                <Text style={{ fontSize: 24, color: 'black' }}>Login Screen</Text>
+            </TouchableOpacity>
             <TrackButton/>
             {
                 isError ? <Text>{error}</Text>

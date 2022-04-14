@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">pokemonApp</string>
+    <string name="facebook_app_id">285708330396979</string>
+    <string name="facebook_client_token">98b49ae92116febc5e46056462ef05d0</string>
 </resources>

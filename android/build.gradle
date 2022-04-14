@@ -11,6 +11,7 @@ buildscript {
         playServicesVersion = "17.0.0" // or find latest version
         androidMapsUtilsVersion = "1.2.1"
         kotlin_version = '1.5.10'
+        googlePlayServicesAuthVersion = "19.2.0"
     }
     repositories {
         google()
@@ -46,5 +47,6 @@ allprojects {
         }
         google()
         maven { url 'https://www.jitpack.io' }
+        mavenCentral()
     }
 }
